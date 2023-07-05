@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, 
+                                #222222b2 0%, 
+                                #6b0505ef -50%, 
+                                #2e2d2dde 45%), 
+                                url(img/bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+/*=== nav ===*/
+.nav {
+    padding: 0.5rem 6%;
+    justify-content: space-between;
+}
+
+/* logo */
+.logo {
+    justify-content: start;
+    column-gap: 0.25rem;
+}
+
+.logo img {
+    width: 2.5rem;
+}
+
+.logo h2 {
+    color: #37D0EE;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #ffa500;
+    font-weight: 400;
+}
+
+/* button */
+.btn {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(45deg, #ff0000 0%, #ffa500 100%);
+    transition: background 0.4s;
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, #ffa500 0%, #ff0000 100%);
+}
+
+
+/* hero */
+.quote-box {
+    width: 80%;
+    max-width: 500px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    box-shadow: #000000b3 0px 5px 15px;
+}
+
+.quote-box h2 {
+    position: relative;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.quote-box h2::after {
+    content: '';
+    position: absolute;
+    width: 4.5rem;
+    height: 0.25rem;
+    border-radius: .25rem;
+    background: linear-gradient(45deg, #93db93, #5555f8, #93db93);
+    left: 50%;
+    bottom: -.5rem;
+    transform: translateX(-50%);
+}
+
+.quote-box blockquote {
+    font-size: 1rem;
+    min-height: 3rem;
+    font-style: italic;
+}
+
+.quote-box blockquote::before {
+    content: '\275D';
+}
+
+.quote-box blockquote::after {
+    content: '\275E';
+}
+
+.quote-box span {
+    display: block;
+    font-size: .8rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    float: right;
+}
+
+.quote-box span::before {
+    content: '\2015';
+}
+
+.quote-box div {
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.quote-box button {
+    background: linear-gradient(90deg, #93db93,  #5555f8);
+    color: #fff;
+    width: 110px;
+    height: 40px;
+    border-radius: 2.5rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.quote-box button img {
+    width: 2.25rem;
+}
+
+.quote-box button:nth-child(2) {
+    background: transparent;
+    color: #333;
+    border: 1px solid #93db93;
+}
+
+/* footer */
+footer {
+    padding: .5rem 0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-evenly;
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 50%);
+}
+
+footer p {
+    padding: 0.1rem;
+    font-size: 0.75rem;
+    color: #f8f4f4;
+}
+
+footer p a {
+    color: #8fb1f3;
+    text-decoration: underline;
+    text-underline-offset: .2rem;
+    transition: all 0.4s;
+}
+
+footer p a:hover {
+    text-decoration: none;
+    color: #ffa500;
+}
+
+
+/* responsive design codes */
+@media screen and (max-width: 576px) {
+    .container {
+        background-size: cover;
+    }
+
+    .nav {
+        padding: 0.5rem 3%;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        column-gap: 0.25rem;
+    }
+    
+    .logo img {
+        width: 1.75rem;
+    }
+    
+    .logo h2 {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    
+    .btn {
+        font-size: 0.8rem;
+        padding: 0.5rem 1.25rem;
+    }
+    .quote-box {
+        padding: 1.5rem;
+    }
+    .quote-box h2 {
+        font-size: 1rem;
+    }
+
+    .quote-box blockquote {
+        font-size: .9rem;
+    }
+
+    .quote-box span {
+        font-size: .7rem;
+    }
+
+    .quote-box div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer p {
+        font-size: 0.5rem;
+    }
+}

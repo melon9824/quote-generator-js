@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="this quote generator is created to learn JavaSceipt">
+    <title>quote-generator-js</title>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- nav -->
+        <nav class="nav flex">
+            <!-- logo -->
+            <div class="logo flex">
+                <img src="img/logo-main.png" alt="logo image">
+                <h2>agile<span>Point</span>.</h2>
+            </div>
+
+            <!-- nav button -->
+            <button type="button" class="nav-btn btn">Inspire me</button>
+        </nav>
+        
+        <!-- hero -->
+        <div class="quote-box">
+            <h2>Quote of the day</h2>
+            <blockquote id="quote">Loading...</blockquote>
+            <span id="author">Loading...</span>
+    
+            <div>
+                <button onclick="getquote(api_url)">New Quote</button>
+                <button onclick="tweet()"><img src="img/twitter-logo.png"> Tweet</button>
+            </div>
+        </div>
+        
+        
+        <!-- footer -->
+        <footer>
+           <p>&copy; <a href="#"><b>agile</b>Point.</a>&bullet; July 04, 2023</p>
+           <p><a href="#">Khorshed Alam</a></p>
+        </footer>
+    </div>
+
+    
+
+    <!-- js -->
+    <script src="main.js"></script>
+</body>
+</html>
